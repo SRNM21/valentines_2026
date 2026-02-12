@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: white; 
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    padding-top: 16px;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.glass-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    width: 80%;
+    max-width: 500px;
+    max-height: 70vh;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.30);
+    
+    color: #ec3ea1;
+    display: flex;
+    flex-direction: column;
+}
+
+.corner-image {
+    position: absolute;
+    top: -60px;
+    left: -40px;
+    transform: rotate(-45deg);
+    width: 100px;
+    height: auto;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.scroll-content {
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.scroll-content::-webkit-scrollbar {
+    width: 6px;
+}
+.scroll-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+.scroll-content::-webkit-scrollbar-thumb {
+    background: #f472b6;
+    border-radius: 10px;
+}
